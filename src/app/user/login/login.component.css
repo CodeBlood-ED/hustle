@@ -1,0 +1,52 @@
+.body {
+  display: flex;
+}
+.form {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display:flex;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 150px;
+  left: 85px;
+  width: 400px;
+}
+button {
+  display: block;
+  margin: 1rem auto 0 auto; /* top auto bottom auto centers horizontally */
+  width: 120px;
+  height: 40px;
+  font-size: 18px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius:10px;
+}
+button:hover {
+    background-color: black;
+    color: white;
+}
+input[type="text"],
+input[type="password"] {
+  height: 40px;
+  font-size: 18px;
+  width: 400px;
+  text-align: center;
+}
+p{
+  padding:10px;
+  text-align: center;
+}
+p a{
+  cursor: pointer;
+  margin:0 10px 0 10px;
+}
+p a:hover{
+  font-weight: bold;
+  color:blue;
+}
