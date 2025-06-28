@@ -1,0 +1,13 @@
+<div class="body">
+    <img src="products/login_page.png">
+    <div class="form" (submit)="onSubmit()">
+        <form [formGroup]="loginForm">
+            <label for="email">Enter Email</label>
+            <input type="text" id="email" formControlName="email" autocomplete="off">
+            <label for="password">Enter Password</label>
+            <input type="password" id="password" formControlName="password">
+            <button type="submit">Login</button>
+            <p>Not registered yet?<a (click)="openRegisterDialog()">Register here!</a></p>
+        </form>
+    </div>
+</div>

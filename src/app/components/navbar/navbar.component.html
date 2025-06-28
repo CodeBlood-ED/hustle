@@ -1,0 +1,13 @@
+<div class="main">
+    <div class="logo">
+        <p>hustle</p>
+    </div>
+    <div class="navbar">
+        <ul>
+            @for(item of items; track item.id) {
+            <li>{{item.name}}</li>
+            }
+        </ul>
+    </div>
+    <a (click)="openLogin()">Login</a>
+</div>
