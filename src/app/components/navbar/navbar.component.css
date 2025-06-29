@@ -55,10 +55,11 @@ li:hover {
   justify-content: center; /* horizontal centering */
   align-items: center; /* vertical centering */
   width: 150px; /* set width */
-  height: 65%; /* set height */
+  height: 100%; /* set height */
+  margin:0 20px 0 20px;
   background-color: rgb(255, 0, 0);
   color:white;
   text-decoration: none;
-  border-radius: 5px;
   cursor:pointer;
+  font-size:20px !important;
 }
