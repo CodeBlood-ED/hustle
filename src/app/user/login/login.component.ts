@@ -4,6 +4,7 @@ import { User } from '../../models/User';
 import { UserService } from '../../services/user.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { RegisterComponent } from '../register/register.component';
+import { UserLoginRequest } from '../../models/UserLoginRequest';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,7 @@ import { RegisterComponent } from '../register/register.component';
 })
 export class LoginComponent {
   readonly dialog = inject(MatDialog);
+  userLoginRequestObject = new UserLoginRequest();
 
   constructor(
     private userService: UserService,
@@ -28,8 +30,12 @@ export class LoginComponent {
   });
 
   onSubmit() {
-    this.user = this.loginForm.value as User;
-    this.userService.userlogin(this.user);
+    this.userLoginRequestObject.email = this.loginForm.value.email;
+    this.userLoginRequestObject.password = this.loginForm.value.password;
+    this.userService.userlogin(this.userLoginRequestObject).subscribe((data)=>{
+      console.log(data.responsepayload);
+      this.LoginDialogRef.close();
+    });
   }
 
   openRegisterDialog() {

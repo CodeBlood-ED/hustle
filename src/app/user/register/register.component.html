@@ -8,6 +8,15 @@
             <input type="password" id="password" formControlName="password">
             <label for="confirmPassword">Confirm your password</label>
             <input type="password" id="confirmPassword" formControlName="confirmPassword">
+            @if(registrationForm.get('confirmPassword')?.hasError('passwordMismatch')) {
+            <div class="bg-danger">
+                Passwords do not match.
+            </div>
+            } @else{
+                <div class="bg-success">
+                Passwords match.
+            </div>
+            }
             <button type="submit">Create account</button>
             <p>Already have an account?<a (click)="openLoginDialog()">Login!</a></p>
         </form>
